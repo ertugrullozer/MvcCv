@@ -1,0 +1,20 @@
+﻿@model MvcCv.Models.Entity.TBLadmin
+@{
+    ViewBag.Title = "Düzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h4>Yeni Admin Düzenleme Sayfası</h4>
+
+<form method="post">
+
+    @Html.Label("Kullanıcı Adı")
+    @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control" })
+    <br />
+    @Html.Label("Şifre")
+    @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control" })
+
+    <button class="btn btn-success mt-2">Güncelle</button>
+</form>
+

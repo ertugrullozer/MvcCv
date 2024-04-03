@@ -1,0 +1,13 @@
+﻿@model MvcCv.Models.Entity.TBLsertifikaGaleri 
+@{
+    ViewBag.Title = "Ekle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Sertifika Ekleme Sayfası</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <input class="form-control" type="file" name="yuklenecekDosya" />
+    <input class="btn btn-success mt-2" type="submit" value="Yükle" />
+</form>
+

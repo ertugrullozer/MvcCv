@@ -1,0 +1,27 @@
+﻿@using MvcCv.Models.Entity
+@model List<TBLsertifikaGaleri>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sertifika Galeri</title>
+    <link rel="stylesheet" href="/responsive gallery/style.css">
+</head>
+<body>
+    <h1>Sertifika Galeri</h1>
+    <div class="container">
+        @foreach (var item in Model)
+        {
+           <a target="_blank" href="@item.SertifikaResim"> <img src="@item.SertifikaResim"></a>
+        }
+
+    </div>
+
+</body>
+</html>
+

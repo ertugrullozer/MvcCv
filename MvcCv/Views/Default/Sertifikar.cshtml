@@ -1,0 +1,73 @@
+﻿@using MvcCv.Models.Entity
+@model List<TBLsertifikalar>
+<head>
+    <style>
+        .btn1 {
+            border: none;
+            display: block;
+            text-align: center;
+            cursor: pointer;
+            text-transform: uppercase;
+            outline: none;
+            overflow: hidden;
+            position: relative;
+            color: #fff;
+            font-weight: 700;
+            font-size: 15px;
+            background-color: #222;
+            padding: 17px 60px;
+            margin: 0 auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+            border-radius: 10px 10px 10px 0px;
+        }
+
+            .btn1 span {
+                position: relative;
+                z-index: 1;
+            }
+
+            .btn1:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 490%;
+                width: 140%;
+                background: #bd5d38;
+                -webkit-transition: all .5s ease-in-out;
+                transition: all .5s ease-in-out;
+                -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+                transform: translateX(-98%) translateY(-25%) rotate(45deg);
+            }
+
+            .btn1:hover:after {
+                -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+                transform: translateX(-9%) translateY(-25%) rotate(45deg);
+                
+             
+            }
+
+    </style>
+
+</head>
+<div class="row">
+    <div class="col-12 p-4">   
+       <div class="resume-section-content">
+            <h2 class="mb-5">ÖDÜLLER & SERTİFİKALAR</h2>
+            <ul class="fa-ul mb-0">
+                @foreach (var item in Model)
+                {
+                    <li>
+                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                        @item.Sertifikalar
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="col mt-1 d-flex justify-content-center"> <a class="btn1" href="/SertifikaGaleri/Index" style="text-decoration:none; color:white"><span>  Sertifika Galeri</span></a> </div>
+</div>
+
+
+
+

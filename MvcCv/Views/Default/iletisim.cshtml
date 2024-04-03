@@ -1,0 +1,63 @@
+﻿<style>
+    .btn1 {
+        border: none;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        text-transform: uppercase;
+        outline: none;
+        overflow: hidden;
+        position: relative;
+        color: #fff;
+        font-weight: 700;
+        font-size: 15px;
+        background-color: #162052;
+        padding: 17px 60px;
+        margin: 0 auto;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+        border-radius: 10px 10px 10px 0px;
+    }
+
+        .btn1 span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn1:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 490%;
+            width: 140%;
+            color: white;
+            background: #6AD4DD;
+            -webkit-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+            -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+            transform: translateX(-98%) translateY(-25%) rotate(45deg);
+        }
+
+        .btn1:hover:after {
+            -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+            transform: translateX(-9%) translateY(-25%) rotate(45deg);
+          
+        }
+</style>
+
+
+
+<div class="resume-section-content">
+    <form method="post">
+        <h2 class="mb-5">İLETİŞİM</h2>
+        <label for="ad" class="form-label">Ad soyad</label>
+        <input type="text" id="ad" class="form-control" name="AdSoyad" required/>
+        <label for="mail" class="form-label">Mail</label>
+        <input type="text" id="mail" class="form-control" name="Mail" required />
+        <label for="konu" class="form-label">Konu</label>
+        <input type="text" id="konu" class="form-control" name="Konu" required/>
+        <label for="mesaj" class="form-label">Mesaj</label>
+        <textarea class="form-control" placeholder="Mesajınızı Giriniz..." id="mesaj" name="Mesaj"></textarea>
+        <button class="btn1 position-absolute top-0 start-0 translate-middle mt-3"><span>Mesaj Gönder</span></button>
+    </form>
+</div>

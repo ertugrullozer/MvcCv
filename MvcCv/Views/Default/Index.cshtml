@@ -1,0 +1,118 @@
+﻿@using MvcCv.Models.Entity
+@model List<TBLhakkinda>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Bilişim Teknolojileri Öğretmeni,Robotik Kodlama,Kurs Eğitmeni,Robot Teknolojileri" />
+    <meta name="author" content="Ertuğrul Özer" />
+    <title>Ertuğrul Özer</title>
+    <link rel="icon" type="image/x-png" href="~/favicon/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="~/startbootstrap-resume-gh-pages/css/styles.css" rel="stylesheet" />
+    <link href="/startbootstrap-resume-gh-pages/css/styles2.css" rel="stylesheet" />
+
+</head>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none ">Ertuğrul Özer</span>
+
+            @foreach (var item in Model)
+            {<div class="d-none d-lg-block">
+                    <div class="box">
+                        <div class="content">
+                            <img src="@item.Resim" alt="">
+                            <div class="fixed">Bilişim <div class="fixed">Teknolojileri</div> Öğretmeni</div>
+
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Hakkımda</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Deneyimlerim</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Eğitim Hayatım</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Yeteneklerim</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Hobilerim</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Sertifikalarım</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">İletişim</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Page Content-->
+    <div class="container-fluid p-0">
+
+        <!-- About-->
+        @foreach (var x in Model)
+        {
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <div class="typing-demo">
+                        <h1 class="mb-0">
+                            @x.Ad
+                            <span class="text-primary">@x.Soyad</span>
+                        </h1>
+                    </div>
+                    <div class="subheading mb-5">
+                        @x.Adres  · @x.Telefon ·
+                        <a href="mailto:name@email.com">@x.Mail</a>
+                    </div>
+                    <p class="lead mb-5">@x.Aciklama</p>
+                    @Html.Action("SosyalMedya")
+                </div>
+            </section>
+        }
+        <hr class="m-0" />
+        <!-- Experience-->
+        <section class="resume-section" id="experience">
+            @Html.Action("Deneyim")
+        </section>
+        <hr class="m-0" />
+        <!-- Eğitim-->
+        @Html.Action("Egitimlerim")
+        <hr class="m-0" />
+        <!-- Yetenekler-->
+        <section class="resume-section" id="skills">
+            @Html.Action("Yeteneklerim")
+        </section>
+        <hr class="m-0" />
+        <!-- Hobiler-->
+        <section class="resume-section" id="interests">
+            @Html.Action("Hobiler")
+        </section>
+        <hr class="m-0" />
+        <!-- Awards-->
+        <section class="m-1" id="awards">
+            @Html.Action("Sertifikar")
+        </section>
+        <!-- iletisim-->
+        <section class="resume-section" id="contact">
+            @Html.Action("iletisim")
+        </section>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="/startbootstrap-resume-gh-pages/js/scripts.js"></script>
+</body>
+</html>
