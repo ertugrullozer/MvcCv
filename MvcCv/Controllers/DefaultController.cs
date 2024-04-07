@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using MvcCv.Models.Entity;
+using MvcCv.Models.sınıfım;
+using MvcCv.Repositories;
 
 namespace MvcCv.Controllers
 {
@@ -13,6 +15,7 @@ namespace MvcCv.Controllers
     {
         // GET: Default
         DbCvEntities db = new DbCvEntities();
+  
         public ActionResult Index()
         {
             var degerler =db.TBLhakkinda.ToList();
@@ -67,6 +70,13 @@ namespace MvcCv.Controllers
             db.SaveChanges();
             return PartialView();
         }
-
+        public ActionResult Blog() 
+        {
+            Class1 cards = new Class1();
+            cards.tBLblogCard1s = db.TBLblogCard1.ToList();
+            cards.tBLblogCard2s = db.TBLblogCard2.ToList();
+            return View(cards);
+        }
+   
     }
 }
