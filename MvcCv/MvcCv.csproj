@@ -2515,6 +2515,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="BlogImage\" />
     <Folder Include="Sertifika\" />
   </ItemGroup>
   <ItemGroup>

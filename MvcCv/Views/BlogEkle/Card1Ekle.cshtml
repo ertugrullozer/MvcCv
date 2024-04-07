@@ -6,9 +6,8 @@
 
 <h2>Card1 Ekle</h2>
 
-<form method="post">
-    @Html.Label("Cart 1 Resim")
-    @Html.TextBoxFor(x => x.Card1Resim, new { @class = "form-control" })
+<form method="post" enctype="multipart/form-data">
+    <input class="form-control" type="file" name="yüklenecekDosya" />
     <br />
     @Html.Label("Cart 1 Başlık")
     @Html.TextBoxFor(x => x.Card1Baslik, new { @class = "form-control" })
