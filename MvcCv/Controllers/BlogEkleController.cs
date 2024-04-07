@@ -55,6 +55,41 @@ namespace MvcCv.Controllers
             repo2.TDelete(t);
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult Card1Güncelle(int id)
+        {
+            TBLblogCard1 t= repo.Find(x => x.ID == id);
+            return View(t);
+        }
+        [HttpPost]
+        public ActionResult Card1Güncelle(TBLblogCard1 p) 
+        {
+            TBLblogCard1 t= repo.Find(x=>x.ID == p.ID);
+            t.Card1Resim = p.Card1Resim;
+            t.Card1Baslik = p.Card1Baslik;
+            t.Card1AtBaslik = p.Card1AtBaslik;
+            t.Card1Tarih = p.Card1Tarih;
+            t.Card1Aciklama = p.Card1Aciklama;
+            repo.TUpdate(t);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult Card2Güncelle(int id)
+        {
+            TBLblogCard2 t = repo2.Find(x=>x.ID == id);
+
+            return View(t);
+        }
+        [HttpPost]
+        public ActionResult Card2Güncelle(TBLblogCard2 p)
+        {
+            TBLblogCard2 t= repo2.Find(x=>x.ID == p.ID);
+            t.Baslik= p.Baslik;
+            t.Aciklama = p.Aciklama;
+            repo2.TUpdate(t);
+            return RedirectToAction("Index");
+        }
 
     }
 }

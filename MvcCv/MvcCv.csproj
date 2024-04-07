@@ -2504,6 +2504,8 @@
     <Content Include="Views\Default\Blog.cshtml" />
     <Content Include="Views\BlogEkle\Card1Ekle.cshtml" />
     <Content Include="Views\BlogEkle\Card2Ekle.cshtml" />
+    <Content Include="Views\BlogEkle\Card1Güncelle.cshtml" />
+    <Content Include="Views\BlogEkle\Card2Güncelle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
