@@ -7,7 +7,9 @@
 
 <h2>Blog Ekle </h2>
 
-<table class="table table-bordered">
+<a class="btn btn-outline-primary mt-2" href="/BlogEkle/Card1Ekle/">Blog Card1 Ekle</a>
+<a class="btn btn-outline-primary mt-2" href="/BlogEkle/Card2Ekle/">Blog Card2 Ekle</a>
+<table class="table table-bordered mt-2">
     <tr>
         <th>#</th>
         <th>1.Cart Resim</th>
@@ -21,16 +23,17 @@
 
     @foreach (var item in Model)
     {
-    <tr>
-        <td>@item.ID</td>
-        <td>@item.Card1Resim</td>
-        <td>@item.Card1Baslik</td>
-        <td>@item.Card1AtBaslik</td>
-        <td>@item.Card1Tarih</td>
-        <td>@item.Card1Aciklama</td>
-        <td><a class="btn btn-success" href="/BlogEkle/Card1Ekle/@item.ID">Düzenle</a></td>
-        <td><a class="btn btn-danger">Sil</a></td>
-    </tr>
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Card1Resim</td>
+            <td>@item.Card1Baslik</td>
+            <td>@item.Card1AtBaslik</td>
+            <td>@item.Card1Tarih</td>
+            <td>@item.Card1Aciklama</td>
+            <td><a class="btn btn-success" href="#">Düzenle</a></td>
+            <td><a class="btn btn-danger" href="#">Sil</a></td>
+        </tr>
+
     }
 
 </table>

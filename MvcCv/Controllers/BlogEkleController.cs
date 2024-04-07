@@ -11,18 +11,12 @@ namespace MvcCv.Controllers
 {
     public class BlogEkleController : Controller
     {
-        // GET: BlogEkle
-
-        //BlogEkleRepository repo=new BlogEkleRepository();
-
-    
-        Class1 cards = new Class1();
-        DbCvEntities db = new DbCvEntities();
+        Card1Repository  repo = new Card1Repository();
+        Card2Repository repo2 = new Card2Repository();
         public ActionResult Index()
         {
-            cards.tBLblogCard1s=db.TBLblogCard1.ToList();
-            cards.tBLblogCard2s=db.TBLblogCard2.ToList();
-            return View(cards);
+            var degerler = repo.List();
+          return View(degerler);
         }
         [HttpGet]
         public ActionResult Card1Ekle()
@@ -32,7 +26,18 @@ namespace MvcCv.Controllers
         [HttpPost]
         public ActionResult Card1Ekle(TBLblogCard1 p)
         {
-            //repo.TAdd(p);
+            repo.TAdd(p);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult Card2Ekle() 
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Card2Ekle(TBLblogCard2 p)
+        {
+           repo2.TAdd(p);
             return RedirectToAction("Index");
         }
 

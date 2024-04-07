@@ -2068,6 +2068,8 @@
     </Compile>
     <Compile Include="Models\sınıfım\Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Card1Repository.cs" />
+    <Compile Include="Repositories\Card2Repository.cs" />
     <Compile Include="Repositories\DeneyimRepository.cs" />
     <Compile Include="Repositories\EgitimRepository.cs" />
     <Compile Include="Repositories\GenericRepository.cs" />
@@ -2501,6 +2503,7 @@
     <Content Include="Views\BlogEkle\Index.cshtml" />
     <Content Include="Views\Default\Blog.cshtml" />
     <Content Include="Views\BlogEkle\Card1Ekle.cshtml" />
+    <Content Include="Views\BlogEkle\Card2Ekle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
