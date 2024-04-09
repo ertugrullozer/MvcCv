@@ -1,0 +1,74 @@
+﻿@model MvcCv.Models.sınıfım.Class1
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Blog Ekle </h2>
+
+
+
+<ul class="nav nav-tabs mt-3">
+    <li class="active"><a class="btn btn-outline-success m-1" data-toggle="tab" href="#home">Card1 Düzenle</a></li>
+    <li><a class="btn btn-outline-success m-1" data-toggle="tab" href="#menu1">Card2 Düzenle</a></li>
+</ul>
+<div class="tab-content">
+
+    <div id="home" class="tab-pane fade in active">
+        <a class="btn btn-outline-primary mt-2" href="/BlogEkle/Card1Ekle/">Blog Card1 Ekle</a>
+        <table class="table table-bordered mt-2">
+            <tr>
+                <th>#</th>
+                <th>1.Cart Resim</th>
+                <th>1.Cart Başlık</th>
+                <th>1.Cart AltBaşlık</th>
+                <th>1.Cart Tarih</th>
+                <th>1.Cart Açıklama</th>
+                <th>Düzenle</th>
+                <th>Sil</th>
+            </tr>
+
+            @foreach (var item in Model.tBLblogCard1s)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.Card1Resim</td>
+                    <td>@item.Card1Baslik</td>
+                    <td>@item.Card1AtBaslik</td>
+                    <td>@item.Card1Tarih</td>
+                    <td>@item.Card1Aciklama</td>
+                    <td><a class="btn btn-success" href="/BlogEkle/Card1Güncelle/@item.ID">Düzenle</a></td>
+                    <td><a class="btn btn-danger" href="/BlogEkle/Card1Sil/@item.ID">Sil</a></td>
+                </tr>
+
+            }
+
+        </table>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+        <a class="btn btn-outline-primary mt-2" href="/BlogEkle/Card2Ekle/">Blog Card2 Ekle</a>
+        <table class="table table-bordered mt-2">
+            <tr>
+                <th>#</th>
+                <th>Başlık</th>
+                <th>Açıklama</th>
+                <th>Düzenle</th>
+                <th>Sil</th>
+            </tr>
+            @foreach (var item in Model.tBLblogCard2s)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.Baslik</td>
+                    <td>@item.Aciklama</td>
+                    <td><a class="btn btn-success" href="/BlogEkle/Card2Güncelle/@item.ID">Düzenle</a></td>
+                    <td><a class="btn btn-danger" href="/BlogEkle/Card2Sil/@item.ID">Sil</a></td>
+                </tr>
+            }
+
+        </table>
+
+    </div>
+</div>
+
+

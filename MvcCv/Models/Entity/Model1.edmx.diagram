@@ -14,7 +14,9 @@
         <EntityTypeShape EntityType="DbCvModel.TBLsertifikalar" Width="1.5" PointX="7.125" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbCvModel.TBLyetenekler" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbCvModel.TBLsosyalmedya" Width="1.5" PointX="9.375" PointY="1.125" />
-        <EntityTypeShape EntityType="DbCvModel.TBLsertifikaGaleri" Width="1.5" PointX="9.25" PointY="4.5" />
+        <EntityTypeShape EntityType="DbCvModel.TBLsertifikaGaleri" Width="1.5" PointX="8.5" PointY="3.75" />
+        <EntityTypeShape EntityType="DbCvModel.TBLblogCard1" Width="1.5" PointX="10.375" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbCvModel.TBLblogCard2" Width="1.5" PointX="12.375" PointY="3.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

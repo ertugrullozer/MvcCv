@@ -1,0 +1,17 @@
+﻿@model MvcCv.Models.Entity.TBLblogCard2
+@{
+    ViewBag.Title = "Card2Güncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Card2Güncelle</h2>
+
+<form method="post">
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+</form>

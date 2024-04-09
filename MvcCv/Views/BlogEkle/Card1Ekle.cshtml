@@ -1,0 +1,28 @@
+﻿@model MvcCv.Models.Entity.TBLblogCard1
+@{
+    ViewBag.Title = "Card1Ekle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Card1 Ekle</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <input class="form-control" type="file" name="yüklenecekDosya" />
+    <br />
+    @Html.Label("Cart 1 Başlık")
+    @Html.TextBoxFor(x => x.Card1Baslik, new { @class = "form-control" })
+    <br />
+    @Html.Label("Cart 1 AltBaşlık")
+    @Html.TextBoxFor(x => x.Card1AtBaslik, new { @class = "form-control" })
+    <br />
+    @Html.Label("Cart 1 Tarih")
+    @Html.TextBoxFor(x => x.Card1Tarih, new { @class = "form-control" })
+    <br />
+    @Html.Label("Cart 1 Açıklama")
+    @Html.TextBoxFor(x => x.Card1Aciklama, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-success">Cart1 Ekle</button>
+
+</form>
+

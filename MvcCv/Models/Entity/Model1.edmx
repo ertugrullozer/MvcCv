@@ -13,6 +13,25 @@
           <Property Name="KullaniciAdi" Type="varchar" MaxLength="20" />
           <Property Name="Sifre" Type="varchar" MaxLength="20" />
         </EntityType>
+        <EntityType Name="TBLblogCard1">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Card1Resim" Type="varchar" MaxLength="100" />
+          <Property Name="Card1Baslik" Type="varchar" MaxLength="50" />
+          <Property Name="Card1AtBaslik" Type="varchar" MaxLength="50" />
+          <Property Name="Card1Tarih" Type="varchar" MaxLength="50" />
+          <Property Name="Card1Aciklama" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="TBLblogCard2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Baslik" Type="varchar" MaxLength="50" />
+          <Property Name="Aciklama" Type="varchar" MaxLength="300" />
+        </EntityType>
         <EntityType Name="TBLdeneyimlerim">
           <Key>
             <PropertyRef Name="ID" />
@@ -101,6 +120,8 @@
         </EntityType>
         <EntityContainer Name="DbCvModelStoreContainer">
           <EntitySet Name="TBLadmin" EntityType="Self.TBLadmin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLblogCard1" EntityType="Self.TBLblogCard1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLblogCard2" EntityType="Self.TBLblogCard2" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLdeneyimlerim" EntityType="Self.TBLdeneyimlerim" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLegitimlerim" EntityType="Self.TBLegitimlerim" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLhakkinda" EntityType="Self.TBLhakkinda" Schema="dbo" store:Type="Tables" />
@@ -203,6 +224,8 @@
           <EntitySet Name="TBLyetenekler" EntityType="Self.TBLyetenekler" />
           <EntitySet Name="TBLsosyalmedya" EntityType="DbCvModel.TBLsosyalmedya" />
           <EntitySet Name="TBLsertifikaGaleri" EntityType="DbCvModel.TBLsertifikaGaleri" />
+          <EntitySet Name="TBLblogCard1" EntityType="DbCvModel.TBLblogCard1" />
+          <EntitySet Name="TBLblogCard2" EntityType="DbCvModel.TBLblogCard2" />
         </EntityContainer>
         <EntityType Name="TBLsosyalmedya">
           <Key>
@@ -220,6 +243,25 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="SertifikaResim" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBLblogCard1">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Card1Resim" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Card1Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Card1AtBaslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Card1Tarih" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Card1Aciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBLblogCard2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -327,6 +369,27 @@
             <EntityTypeMapping TypeName="DbCvModel.TBLsertifikaGaleri">
               <MappingFragment StoreEntitySet="TBLsertifikaGaleri">
                 <ScalarProperty Name="SertifikaResim" ColumnName="SertifikaResim" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLblogCard1">
+            <EntityTypeMapping TypeName="DbCvModel.TBLblogCard1">
+              <MappingFragment StoreEntitySet="TBLblogCard1">
+                <ScalarProperty Name="Card1Aciklama" ColumnName="Card1Aciklama" />
+                <ScalarProperty Name="Card1Tarih" ColumnName="Card1Tarih" />
+                <ScalarProperty Name="Card1AtBaslik" ColumnName="Card1AtBaslik" />
+                <ScalarProperty Name="Card1Baslik" ColumnName="Card1Baslik" />
+                <ScalarProperty Name="Card1Resim" ColumnName="Card1Resim" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLblogCard2">
+            <EntityTypeMapping TypeName="DbCvModel.TBLblogCard2">
+              <MappingFragment StoreEntitySet="TBLblogCard2">
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
