@@ -102,6 +102,13 @@ namespace MvcCv.Controllers
             repo2.TUpdate(t);
             return RedirectToAction("Index");
         }
-
+        
+        DbCvEntities db = new DbCvEntities();
+        public ActionResult BlogGetir(int id) 
+        { 
+            var degerler =db.TBLblogCard1.Where(x => x.ID == id).ToList();
+            return View(degerler);
+        }
+      
     }
 }
